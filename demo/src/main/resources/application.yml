@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: multiple_datasources
+    
+          
+db1:
+   datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url:  jdbc:mysql://localhost:3306/db1
+      name: db1
+      username: root
+      password: root
+      jpa:
+         database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+         
+db2:
+   datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url:  jdbc:mysql://localhost:3306/db2
+      name: db2
+      username: root
+      password: root
+      jpa:
+         database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+          
