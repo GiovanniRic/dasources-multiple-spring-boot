@@ -20,7 +20,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "db1EntityManagerFactory", basePackages = {
-		"com.sitael.bike.repository.db1" })
+		"com...repository.db1" })
 public class DataSourceDb1Conf {
 
 	@Primary
@@ -40,7 +40,7 @@ public class DataSourceDb1Conf {
 	@Bean(name = "db1EntityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("db1DataSource") HikariDataSource dataSource) {
-		return builder.dataSource(dataSource).packages("com.sitael.bike.model.entities.db1")
+		return builder.dataSource(dataSource).packages("com...entities.db1")
 				.persistenceUnit("db1").build();
 	}
 
